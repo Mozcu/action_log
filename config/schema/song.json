@@ -1,0 +1,37 @@
+[
+    {
+        "mode": "REQUIRED",
+        "name": "song_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "user_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "album_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "REQUIRED",
+        "name": "song_owner_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ip_address",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "country",
+        "type": "STRING"
+    },
+    {
+        "mode": "REQUIRED",
+        "name": "created_at",
+        "type": "TIMESTAMP"
+    }
+]

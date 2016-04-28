@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule    ^$    web/index_dev.php    [L]
+    RewriteRule    (.*) web/index_dev.php$1    [L]
+</IfModule>
