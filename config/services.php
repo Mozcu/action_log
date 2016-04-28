@@ -16,6 +16,10 @@ $app['download_service'] = $app->share(function ($app) {
     return new App\Service\AlbumDownloadService($app['google_big_query'], $app['parameters']['big_query']['dataset']);
 });
 
+$app['album_service'] = $app->share(function ($app) {
+    return new App\Service\AlbumService($app['google_big_query'], $app['parameters']['big_query']['dataset']);
+});
+
 // Repositories
 /*
  * $app['user_repository'] = $app->share(function ($app) {

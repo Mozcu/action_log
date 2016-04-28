@@ -10,6 +10,11 @@
         "type": "INTEGER"
     },
     {
+        "mode": "REQUIRED",
+        "name": "album_owner_id",
+        "type": "INTEGER"
+    },
+    {
         "mode": "NULLABLE",
         "name": "ip_address",
         "type": "STRING"

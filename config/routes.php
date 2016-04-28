@@ -15,6 +15,10 @@ $app['download_controller'] = $app->share(function() use ($app) {
     return new Controller\DownloadController($app);
 });
 
+$app['album_controller'] = $app->share(function() use ($app) {
+    return new Controller\AlbumController($app);
+});
+
 // Routes
 $app->get('/', "index_controller:index");
 
@@ -25,3 +29,7 @@ $app->get('/songs', 'song_controller:get');
 // Album Downloads
 $app->post('/downloads', 'download_controller:create');
 $app->get('/downloads', 'download_controller:get');
+
+// Album
+$app->post('/albums', 'album_controller:create');
+$app->get('/albums', 'album_controller:get');
