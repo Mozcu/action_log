@@ -8,7 +8,12 @@ class SongController extends AppController
 {
     public function create(Request $request)
     {
-        $this->getService('song_service')->addSong($request->request->all());
+        $song = $request->get('song');
+        if (is_null($song)) {
+            throw new BadRequestHttpException();
+        }
+        
+        $this->getService('song_service')->addSong($song);
         return $this->getJSONResponse(['success' => true]);
     }
     
